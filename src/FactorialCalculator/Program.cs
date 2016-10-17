@@ -10,11 +10,11 @@ using System.Numerics;
 
 namespace FactorialCalculator
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-
+            // -- Check if any params are passed
             if (args.Count() > 0)
             {
                 Console.WriteLine("Factorial Calculator");
@@ -24,10 +24,11 @@ namespace FactorialCalculator
                 {
                     try
                     {
+                        // -- Validate 
                         BigInteger n = ValidateInput(args[i]);
 
+                        // -- Calculate 
                         n = CalculateFactorial(n);
-
                         Console.WriteLine("{0}! = {1}", args[i], n);
                     }
                     catch (InvalidInputException ex)
@@ -39,21 +40,33 @@ namespace FactorialCalculator
                         Console.WriteLine("Error: {0}", fex.Message);
                     }
                 }
+
+                Console.WriteLine("Execution completed.");
+                Console.WriteLine();
+                Console.ReadLine();
             }
             else
             {
-                Console.WriteLine("Please enter a number!");
+                Console.WriteLine("Factorial Calculator (n!)");
+                Console.WriteLine("Please enter a number:");
+                Console.WriteLine();
 
+                // -- This while loop allows the user to enter as many numbers to calculate the factorial of the given number
+                // -- The 'exit' command can be used to exit the process
                 while(true)
                 {
+                    // -- Read input
                     var input = Console.ReadLine();
 
+                    // -- Exit if the input == 'exit'
                     if (input == "exit") break;
 
                     try
                     {
+                        // -- Validate
                         BigInteger n = ValidateInput(input);
 
+                        // -- Calculate
                         n = CalculateFactorial(n);
 
                         Console.WriteLine("{0}! = {1}", input, n);
@@ -74,16 +87,13 @@ namespace FactorialCalculator
         }
 
         /// <summary>
-        /// Calculate n!
+        /// Calculate n! recursively
         /// </summary>
         /// <param name="n">Value to calculate</param>
         /// <returns>Factorial of n</returns>
         /// <exception cref="FactorialException">Thrown when the value of n is not valid to calculate factorial.</exception>
         public static BigInteger CalculateFactorial(BigInteger n)
         {
-            // -- Initialize the base factorial calculation poBigInteger
-            BigInteger factorial = 1;
-
             // -- Based on rules of Factorial calculation, if n = 0 then 0! = 1
             if (n == 0) return 1;
 
