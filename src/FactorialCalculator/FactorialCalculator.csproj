@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Exceptions\FactorialException.cs" />
     <Compile Include="Exceptions\InvalidInputException.cs" />
+    <Compile Include="Factorial.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

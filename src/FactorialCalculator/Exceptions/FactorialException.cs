@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactorialCalculator
+namespace FactorialCalculator.Exceptions
 {
     /// <summary>
     /// Factorial Exception, used when calculating factorial of n.
