@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialCalculator", "FactorialCalculator\FactorialCalculator.csproj", "{E4A1BBE1-0725-48C3-9312-E86DDD0462EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialCalculator.UnitTests", "FactorialCalculator.UnitTests\FactorialCalculator.UnitTests.csproj", "{57748A20-4147-4AD6-9AB3-CFC30BAECF04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4A1BBE1-0725-48C3-9312-E86DDD0462EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A1BBE1-0725-48C3-9312-E86DDD0462EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A1BBE1-0725-48C3-9312-E86DDD0462EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A1BBE1-0725-48C3-9312-E86DDD0462EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57748A20-4147-4AD6-9AB3-CFC30BAECF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57748A20-4147-4AD6-9AB3-CFC30BAECF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57748A20-4147-4AD6-9AB3-CFC30BAECF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57748A20-4147-4AD6-9AB3-CFC30BAECF04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
