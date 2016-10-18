@@ -34,10 +34,15 @@ namespace FactorialCalculator
         public static BigInteger ValidateInput(string input)
         {
             // -- Assign 'out' value
-            BigInteger n = 0;
+            var n = new BigInteger(0);
 
-            // -- Check if the value is actually a long
+            // -- Check if the value is actually a bigint
             var valid = BigInteger.TryParse(input, out n);
+
+            if(input.Length >= 4)
+            {
+                throw new InvalidInputException("I do not have enough memory to calculate this.");
+            }
 
             // if the input is invalid, throw exception to calling method.
             if (!valid)
