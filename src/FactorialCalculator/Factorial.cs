@@ -39,6 +39,7 @@ namespace FactorialCalculator
             // -- Check if the value is actually a bigint
             var valid = BigInteger.TryParse(input, out n);
 
+            // -- There could be a better solution for this, but check the length of the input otherwise a stack overflow exception will occur
             if(input.Length >= 4)
             {
                 throw new InvalidInputException("I do not have enough memory to calculate this.");
