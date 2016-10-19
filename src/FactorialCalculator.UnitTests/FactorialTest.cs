@@ -12,7 +12,7 @@ namespace FactorialCalculator.UnitTests
         string InvalidInput = "";
         int PositiveInteger = 7;
         int NegativeInteger = -1;
-        int ZeroInteger;
+        int ZeroInteger = 0;
 
         [TestMethod]
         public void ShouldCalculateFractorial()
@@ -22,22 +22,10 @@ namespace FactorialCalculator.UnitTests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(FactorialException))]
         public void ShouldThrowFactorialException()
         {
-            bool exceptionCaught = false;
-
-            try
-            {
-                var result = Factorial.Calculate(NegativeInteger);
-            }
-            catch(FactorialException ex)
-            {
-                exceptionCaught = true;
-            }
-            finally
-            {
-                Assert.IsTrue(exceptionCaught);
-            }
+            var result = Factorial.Calculate(NegativeInteger);
         }
 
         [TestMethod]
@@ -48,22 +36,10 @@ namespace FactorialCalculator.UnitTests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(InvalidInputException))]
         public void ShouldThrowInvalidInputException()
         {
-            bool exceptionCaught = false;
-
-            try
-            {
-                var result = Factorial.ValidateInput(InvalidInput);
-            }
-            catch (InvalidInputException)
-            {
-                exceptionCaught = true;
-            }
-            finally
-            {
-                Assert.IsTrue(exceptionCaught);
-            }
+            var result = Factorial.ValidateInput(InvalidInput);
         }
 
         [TestMethod]
